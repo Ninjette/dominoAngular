@@ -1,0 +1,101 @@
+section.container.domino-section
+	.selection-mode(ng-show="assignTopElemMode || assignBottomElemMode")
+		p.selection-mode__title selection mode
+		.selection-mode__description
+
+			p(ng-show="assignTopElemMode") Choose top of the domino
+			p(ng-show="assignBottomElemMode") Choose bottom of the domino
+
+	button.domino-section__rotate.js-prev.btn.btn-success.button
+		| rotate left
+	button.domino-section__new.btn.btn-info.button(ng-click="createNew()")
+		| new
+	button.domino-section__rotate.js-next.btn.btn-success.button
+		| rotate right
+
+	.row
+		.col-sm-6
+			.domino-wrap
+				.domino.js-domino
+					.domino__elem.domino__elem--top.domino__elem--3(title="change")
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+					.domino__elem.domino__elem--bottom.domino__elem--6(title="change")
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+
+			.sliders-wrap
+				#main
+					// top slider
+					#slider
+						#textarea_one 0
+						#textarea_two 100
+					p.slider-title size
+				#main_bot
+					// bottom slider
+					#slider_bottom
+						#textarea_three 0
+						#textarea_four 100
+					p.slider-title speed
+
+		.col-sm-6
+			.examples
+				.domino.domino--example(ng-show="assignTopElemMode || assignBottomElemMode")
+					.domino__elem.domino__elem--1.js-elem
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+					.domino__elem.domino__elem--border.domino__elem--2.js-elem
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+					.domino__elem.domino__elem--border.domino__elem--3.js-elem
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+					.domino__elem.domino__elem--border.domino__elem--4.js-elem
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+					.domino__elem.domino__elem--border.domino__elem--5.js-elem
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+					.domino__elem.domino__elem--border.domino__elem--6.js-elem
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot
+						.domino__dot

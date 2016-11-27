@@ -1,0 +1,13 @@
+doctype html
+html(ng-app="testApp")
+	head
+		- var page_name = "Temp"
+		include ./includes/head.jade
+
+	body
+		include ./includes/header.jade
+
+		main
+			div(ng-view='')
+
+		include ./includes/footer.jade

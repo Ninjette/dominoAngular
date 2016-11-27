@@ -1,0 +1,10 @@
+.button{
+	margin: 0 3px;
+}
+.input{
+	border-radius: 3px;
+	padding: 5px;
+	&--short{
+		max-width: 50px;
+	}
+}
